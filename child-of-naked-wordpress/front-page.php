@@ -60,10 +60,11 @@ get_header(); // This fxn gets the header.php file and renders it
          */
         $args = array(
             /**
-             * This parameter says 'return x of the posts you find with the above critera'; use -1 to return all available posts
+             * This parameter says 'return x number of posts'; use -1 to return all available posts
              */
             'posts_per_page' => 7
         );
+        $count = 1;
 
         $custom_query = new WP_Query($args);
 
@@ -76,7 +77,9 @@ get_header(); // This fxn gets the header.php file and renders it
 
                 <?php while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
 
-                    <li><?php the_title(); ?></li>
+                    <li><?php echo $count; ?>. <?php the_title(); ?></li>
+                    
+                    <?php $count++; ?>
 
                 <?php endwhile; ?>
 
@@ -215,11 +218,11 @@ get_header(); // This fxn gets the header.php file and renders it
              * This param essentially says 'find me all of the posts with a "Style" term of "Rock n' Roll" *or* "Pop"'
              */
             'tax_query' => array(
-                'relation' => 'OR', //also try 'AND' to see how that works
+                'relation' => 'AND', //also try 'OR' to see how that works
                 array(
                     'taxonomy' => 'style',
                     'field' => 'slug',
-                    'terms' => 'rock-n-roll',
+                    'terms' => 'rock',
                 ),
                 array(
                     'taxonomy' => 'style',
