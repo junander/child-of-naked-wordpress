@@ -44,7 +44,6 @@ get_header(); // This fxn gets the header.php file and renders it
             <article class="post error">
                 <h1 class="404">Nothing posted yet</h1>
             </article>
-           <div id="listsection">
 <div id="firstlist">
         <?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
 
@@ -72,7 +71,7 @@ get_header(); // This fxn gets the header.php file and renders it
         if ($custom_query->have_posts()):
             ?>
 
-            <h2>South</h2>
+            <h2>The South</h2>
 
             <ul class="artist-list">
 
@@ -113,7 +112,7 @@ get_header(); // This fxn gets the header.php file and renders it
         if ($custom_query->have_posts()):
             ?>
 
-            <h2>Midwest</h2>
+            <h2>The Midwest</h2>
 
             <ul class="artist-list">
 
@@ -131,7 +130,7 @@ get_header(); // This fxn gets the header.php file and renders it
 
         <?php endif; ?>
 
-       </div> <!-- closes second list -->
+       </di> <!-- closes second list -->
      <div id="thirdlist">
        <?php
         /**
@@ -151,7 +150,7 @@ get_header(); // This fxn gets the header.php file and renders it
         if ($custom_query->have_posts()):
             ?>
 
-            <h2>East</h2>
+            <h2>The EAST</h2>
 
             <ul class="artist-list">
 
@@ -169,8 +168,8 @@ get_header(); // This fxn gets the header.php file and renders it
 
         <?php endif; ?>
 
-       </div> <!-- closes third list -->
-</div>
+       </di> <!-- closes third list -->
+
 
     </div><!-- #content .site-content -->
 </div><!-- #primary .content-area -->

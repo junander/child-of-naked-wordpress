@@ -7,3 +7,12 @@ Author URI:     http: //www.jayvanburen.org
 Template:       naked-wordpress-master
 Version:        0.1.0
 -------------------------------------------------------------- */
+
+body div#listsection {
+display:block;
+width:200px;
+height:200px;
+overflow:hidden;
+background-color: #ff0000;
+width
+}
